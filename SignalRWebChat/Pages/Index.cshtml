@@ -1,0 +1,57 @@
+﻿@page
+@*<div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-2">User</div>
+            <div class="col-4"><input type="text" id="userInput" /></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Message</div>
+            <div class="col-4"><input type="text" id="messageInput" /></div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-6">
+                <input type="button" id="sendButton" value="Send Message" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>*@
+
+
+<h1 class="mb-3">SignalR Web Chat</h1>
+
+<div class="mb-3">
+    <span class="badge badge-pill badge-success d-none" id="con">Connected</span>
+    <span class="badge badge-pill badge-danger" id="noCon">No connection</span>
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="">Username</span>
+    </div>
+    <input id="userInput" type="text" class="form-control">
+</div>
+
+<div class="flex-grow-1 border p-2 mb-3 overflow-auto" id="messageDiv"></div>
+
+<form id="myForm">
+    <div class="input-group mb-3">
+        <input id="myInput" type="text" name="msg" class="form-control" placeholder="Enter message">
+        <div class="input-group-append">
+            <button id="sendButton" class="btn btn-outline-primary" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
